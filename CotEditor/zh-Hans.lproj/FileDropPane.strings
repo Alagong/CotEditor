@@ -1,55 +1,61 @@
 /*
- FileDropPane.strings
+ 
+ FileDropPane.strings (Simplified Chinese)
  
  CotEditor
- http://coteditor.com
+ https://coteditor.com
  
- Created on 2014-12-12 by 1024jp
+ Created by 1024jp on 2014-12-12.
  Localized by onevcat
- encoding="UTF-8"
  
- © 2014 CotEditor Project
+ ------------------------------------------------------------------------------
+ 
+ © 2014-2017 CotEditor Project
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ https://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ 
  */
 
-/* Class = "NSTextFieldCell"; title = "Extensions:"; ObjectID = "3331"; */
-"3331.title" = "扩展名:";
-/* Class = "NSTextFieldCell"; title = "(comma separated, no dots)"; ObjectID = "3335"; */
-"3335.title" = "(逗号分隔, 不要带点)";
+/* Class = "NSTextFieldCell"; title = "File Drop Definitions:"; ObjectID = "3331"; */
+"3331.title" = "文件拖拽定义：";
 
-/* Class = "NSTextFieldCell"; title = "Glossary:"; ObjectID = "3337"; */
-"3337.title" = "用法说明:";
+/* Class = "NSTableColumn"; headerCell.title = "Extensions"; ObjectID = "FAF-cL-AAk"; */
+"FAF-cL-AAk.headerCell.title" = "扩展名";
+"FAF-cL-AAk.headerToolTip" = "拖拽文件的文件扩展名 (逗号分隔)。";  /* File extensions of dropped file (comma separated). */
 
-/* Class = "NSButtonCell"; ibShadowedToolTip = "Add"; ObjectID = "3333"; */
-"3333.ibShadowedToolTip" = "添加";
-/* Class = "NSButtonCell"; ibShadowedToolTip = "Delete"; ObjectID = "3334"; */
-"3334.ibShadowedToolTip" = "删除";
+/* Class = "NSTableColumn"; headerCell.title = "Syntax Style"; ObjectID = "RqT-x4-YbN"; */
+"RqT-x4-YbN.headerCell.title" = "语法样式";
+"RqT-x4-YbN.headerToolTip" = "语法样式中的文件拖拽设置已启用";  /* Syntax style in which this file drop setting is enabled. */
+
+/* Class = "NSTableColumn"; headerCell.title = "Description"; ObjectID = "p2m-Qi-6k3"; */
+"p2m-Qi-6k3.headerCell.title" = "描述";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "All"; ObjectID = "hY5-0z-qN6"; */
+"hY5-0z-qN6.ibShadowedIsNilPlaceholder" = "全部";  // displays if no scope extension is specified
+/* Class = "NSMenuItem"; title = "All"; ObjectID = "W3Z-PB-IUJ"; */
+"W3Z-PB-IUJ.title" = "全部";  // displays if no scope syntax style is specified
+
+/* Class = "NSButtonCell"; ibShadowedToolTip = "Add"; ObjectID = "457"; */
+"457.ibShadowedToolTip" = "添加";
+/* Class = "NSButtonCell"; ibShadowedToolTip = "Delete"; ObjectID = "458"; */
+"458.ibShadowedToolTip" = "删除";
 
 
 /* Class = "NSTextFieldCell"; title = "Insertion Format:"; ObjectID = "3332"; */
-"3332.title" = "按格式插入:";
-/* Class = "NSMenuItem"; title = "Insert Pre-Formatted String"; ObjectID = "541"; */
-"541.title" = "插入预先定义的字符串";
+"3332.title" = "按格式插入：";
 
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file absolute path."; ObjectID = "544"; */
-"544.ibShadowedToolTip" = "拖拽的文件绝对路径";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The relative path between dropped file and the document."; ObjectID = "546"; */
-"546.ibShadowedToolTip" = "拖拽的文件与编辑中文档的相对路径";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file name include extension (if exists)."; ObjectID = "542"; */
-"542.ibShadowedToolTip" = "拖拽的文件的文件名以及扩展名 (如果存在)";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file name without extension."; ObjectID = "538"; */
-"538.ibShadowedToolTip" = "不带扩展名的文件名";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file's extension."; ObjectID = "694"; */
-"694.ibShadowedToolTip" = "拖拽的文件的扩展名";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file's extension (converted to lowercase)."; ObjectID = "695"; */
-"695.ibShadowedToolTip" = "拖拽的文件的扩展名 (转换为小写)";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The dropped file's extension (converted to uppercase)."; ObjectID = "696"; */
-"696.ibShadowedToolTip" = "拖拽的文件的扩展名 (转换为大写)";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "The parent directory name of dropped file."; ObjectID = "539"; */
-"539.ibShadowedToolTip" = "拖拽的文件的上级目录";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "(if the dropped file is Image) image width."; ObjectID = "540"; */
-"540.ibShadowedToolTip" = "图片宽度 (如果拖拽文件是图像)";
-/* Class = "NSMenuItem"; ibShadowedToolTip = "(if the dropped file is Image) image height."; ObjectID = "537"; */
-"537.ibShadowedToolTip" = "图片高度 (如果拖拽文件是图像)";
+/* Class = "NSMenuItem"; title = "Insert Variable"; ObjectID = "541"; */
+"541.title" = "插入变量";
 
 /* Class = "IBBindingConnection"; ibShadowedNoSelectionPlaceholder = "No extension is selected."; ObjectID = "ib2-Zw-Ucy"; */
-"ib2-Zw-Ucy.ibShadowedNoSelectionPlaceholder" = "没有选中扩展名";
+"ib2-Zw-Ucy.ibShadowedNoSelectionPlaceholder" = "没有选中扩展名。";

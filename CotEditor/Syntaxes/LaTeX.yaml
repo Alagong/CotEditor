@@ -3,26 +3,31 @@ extensions:
 - keyString: "TEX"
 - keyString: "sty"
 - keyString: "cls"
+metadata:
+  distributionURL: "https://coteditor.com"
+  author: "Yuhei Kuratomi"
+  license: "Same as CotEditor"
+  lastModified: "2020-12-13"
+  description: "Maintained by CotEditor Project."
+  version: "2.0.2"
 outlineMenu:
 - beginString: "[\\\\¥]chapter\\*?\\{(.*)\\}"
+  description: "chapter"
   keyString: "$1"
 - beginString: "[\\\\¥]part\\*?\\{(.*)\\}"
+  description: "part"
   keyString: "$1"
   bold: true
 - beginString: "[\\\\¥]section\\*?\\{(.*)\\}"
+  description: "section"
   keyString: "    $1"
 - beginString: "[\\\\¥]subsection\\*?\\{(.*)\\}"
+  description: "subsection"
   keyString: "        $1"
 - beginString: "[\\\\¥]subsubsection\\*?\\{(.*)\\}"
+  description: "subsubsection"
   keyString: "            $1"
 comments: []
-metadata:
-  distributionURL: "http://coteditor.com"
-  author: "Yuhei Kuratomi"
-  license: "Same as CotEditor"
-  lastModified: "2014-10-27"
-  description: "Maintained by CotEditor Project."
-  version: "2.0"
 numbers:
 - beginString: "[\\\\¥]frac\\{[^}]+\\}\\{[^}]"
   endString: "\\}"
@@ -69,6 +74,8 @@ values:
   regularExpression: true
 - beginString: "\\$([^$\\n]+)\\$"
   regularExpression: true
+- beginString: "\\("
+  endString: "\\)"
 keywords:
 - beginString: "[\\\\¥]author\\{.*\\}"
   regularExpression: true

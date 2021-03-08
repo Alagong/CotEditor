@@ -1,11 +1,19 @@
 extensions:
 - keyString: "yaml"
 - keyString: "yml"
+metadata:
+  author: "1024jp"
+  distributionURL: "https://coteditor.com"
+  version: "1.2.0"
+  license: "Same as CotEditor"
+  lastModified: "2018-09-05"
 outlineMenu:
-- beginString: "^([^ -].*?):"
+- beginString: "^([^\\n -].*?):"
   keyString: "$1:"
+  description: "top level element"
 - beginString: "^---"
   keyString: "-"
+  description: "block"
 completions: []
 commands:
 - beginString: "%TAG"
@@ -16,19 +24,13 @@ commands:
 - beginString: "^\\.\\.\\.$"
   regularExpression: true
 attributes: []
-metadata:
-  author: "1024jp"
-  distributionURL: "http://coteditor.com"
-  version: "1.1"
-  license: "Same as CotEditor"
-  lastModified: "2014-09-24"
 characters:
-- beginString: "\\b\\d{4}-\\d{2}-\\d{2}( \\d{2}:\\d{2}:\\d{2}( [-+]\\d{2}:\\d{2})?)?\\b"
+- beginString: "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}|[0-9]{4}-[0-9]{2}?-[0-9]{2}?([Tt]|[ \\t]+)[0-9]{2}?:[0-9]{2}:[0-9]{2}(\\.[0-9]*)?(([ \\t]*)Z|[-+][0-9]{2}?(:[0-9]{2})?)?\\b"
   regularExpression: true
+  description: "time"
 comments: []
 values:
-- beginString: "(?<!!)null\\b"
-  ignoreCase: true
+- beginString: "(?<!!)(?:null|Null|NULL)\\b"
   regularExpression: true
 - beginString: "false"
   ignoreCase: true
@@ -70,7 +72,10 @@ types:
 numbers:
 - beginString: "(?<=([-:]|!!float|!!int)) +[0-9,.]+(?=[ \\n\\}\\]])"
   regularExpression: true
-- beginString: ".inf"
+- beginString: "[-+]?\\.(inf|Inf|INF)\\b"
+  regularExpression: true
+- beginString: "\\.(nan|NaN|NAN)\\b"
+  regularExpression: true
 - beginString: "0x[0-9a-fA-F]+"
   regularExpression: true
 strings:
@@ -83,9 +88,11 @@ keywords:
     ]*:[ \\t\\n])"
   regularExpression: true
 variables:
-- beginString: "&[^ \\t\\n]+\\b"
+- beginString: "(?<!\\w)&[^ \\t\\n]+\\b"
   regularExpression: true
-- beginString: "\\*[^ \\t\\n]+\\b"
+  description: "anchor"
+- beginString: "(?<!\\w)\\*[^ \\t\\n]+\\b"
   regularExpression: true
+  description: "reference"
 commentDelimiters:
   inlineDelimiter: "#"

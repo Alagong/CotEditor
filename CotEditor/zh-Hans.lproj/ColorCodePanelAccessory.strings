@@ -1,14 +1,29 @@
 /*
- ColorCodePanelAccessory.strings
+ 
+ ColorCodePanelAccessory.strings (Simplified Chinese)
  
  CotEditor
- http://coteditor.com
+ https://coteditor.com
  
- Created on 2014-12-12 by 1024jp
+ Created by 1024jp on 2014-12-12.
  Localized by onevcat
- encoding="UTF-8"
  
- © 2014 CotEditor Project
+ ------------------------------------------------------------------------------
+ 
+ © 2014-2015 CotEditor Project
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ https://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ 
  */
 
 /* Class = "IBBindingConnection"; ObjectID = "zwB-Z7-P18"; */
@@ -21,7 +36,7 @@
 /* Class = "NSMenuItem"; title = "Hex"; ObjectID = "vF1-in-Dlv"; */
 "vF1-in-Dlv.title" = "Hex";
 /* Class = "NSMenuItem"; title = "Hex (Short)"; ObjectID = "wEc-KD-y7s"; */
-"wEc-KD-y7s.title" = "Hex (短)";
+"wEc-KD-y7s.title" = "Hex（短）";
 /* Class = "NSMenuItem"; title = "CSS RGB"; ObjectID = "6bH-jm-mNR"; */
 "6bH-jm-mNR.title" = "CSS RGB";
 /* Class = "NSMenuItem"; title = "CSS RGBa"; ObjectID = "cxo-sm-Sx5"; */
@@ -30,3 +45,5 @@
 "TnX-U4-Fkz.title" = "CSS HSL";
 /* Class = "NSMenuItem"; title = "CSS HSLa"; ObjectID = "k4U-AQ-5ws"; */
 "k4U-AQ-5ws.title" = "CSS HSLa";
+/* Class = "NSMenuItem"; title = "CSS Keyword"; ObjectID = "dY5-ZH-n6l"; */
+"dY5-ZH-n6l.title" = "CSS 关键字";

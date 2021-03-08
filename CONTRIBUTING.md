@@ -5,7 +5,7 @@ Contributing Guidelines
 General Feedback
 --------------------------
 
-Create a new issue on our [Issues page](https://github.com/coteditor/CotEditor/issues). You can write your feedback either in English or in Japanese.
+Create a new issue on our [Issues page](https://github.com/coteditor/CotEditor/issues). You can write your feedback either in English (recommended) or in Japanese.
 
 Bug reports __must__ include your environment. You can generate a bug report template automatically in CotEditor selecting "Help" > "Create Bug Report…" in the menu.
 
@@ -14,36 +14,56 @@ Bug reports __must__ include your environment. You can generate a bug report tem
 Pull-Request
 --------------------------
 
-- Make a topic branch, instead commit to the master or develop branch.
+- Make a topic branch, instead of committing to the master or develop branch.
 
 
 ### General Code Improvements
 
-Bug fixes and improvements are welcome. If you wanna add a new feature or the change is huge, it's better at first to ask the team whether your idea will be accepted.
+Bug fixes and improvements are welcome. If you want to add a new feature or the change is huge, it's better at first to ask the team whether your idea will be accepted.
 
-By adding code, please follow our coding style guide below. 
+By adding code, please follow our coding style guide below.
 
 
 ### Localization
 
-Fixing/updating existing localizations is always welcome. The project team may add `FIXME:` tag as a comment in the localized strings files, if there are updated strings to be localized.
+Fixing/updating existing localizations is always welcome. The project team may add `FIXME:` tag as a comment in the localized strings files if there are updated strings to be localized.
 
-By localization, use OS X standard terms. It might be helpful for you to study native Apple applications like TextEdit.app or the System Preferences to know how Apple localizes terms in their apps.
+If your localization makes the Autolayout destroy, try first making the sentence shorter. However, if it's impossible, then just tell us about it with a screenshot when you make a pull-request. We'll update the xib file to layout your localized terms correctly.
 
-If your localization makes the Autolayout destroy, just tell us about it with a screenshot when you make a pull-request. We'll update the xib file to layout your localized terms correctly.
+#### Good references for localization
 
-#### Submit a new localization
+By localization, use macOS standard terms. It might be helpful to study native Apple applications like TextEdit.app or the System Preferences to know how Apple localizes terms in their apps.
 
-We recommend to copy .strings files in CotEditor/ja.lproj/ directory in order to use them as templates, because Japanese localization is always up-to-date and well organized.
+Especially, follow the terms of the following applications.
 
-To localize CotEditor, [OgreKit framework](https://github.com/sonoisa/OgreKit) which is used for the CotEditor's find panel must also be localized. If OgreKit doesn't contain your language, localize at least the `FindPanel/Resources/__Language__.lproj/OgreTextFinderLocalizable.strings` file and make a pull-request to [CotEditor's repo](https://github.com/coteditor/OgreKit).
+- Menu item titles in TextEdit.app
+- Find panel in Pages.app
+- Some setting messages in ScriptEditor.app
+
+#### Submitting a new localization
+
+Copy one of a whole .lproj directory and use it as a template. We recommend using `CotEditor/ja.lproj/` or `de.lproj/` directory because they are always up-to-date and well organized.
+Note that you don't need to localize the Unicode block names in the `Unicode.strings` file.
+
+Continuous maintenance of the localization is highly recommended when providing a new localization. Please tell us if you can work with us. We'll call you every time before releasing a new version when we have new strings to be localized, so that you can keep all your localized strings up to date.
+Currently, we already have maintainers for:
+
+- Japanese
+- Simplified Chinese
+- Italian
+- (Brazilian) Portuguese
+- French
+
+#### Localization for App Store
+
+CotEditor project is also asking for localization of description on the Mac App Store. We have a separate repository for it at [coteditor/Documents-for-AppStore](https://github.com/coteditor/Documents-for-AppStore).
 
 
 ### Syntax Styles
 
-#### Add a new bundled syntax style
+#### Adding a new bundled syntax style
 
-Put just your new syntax stye into `/CotEditor/syntaxes/` directory. You don't need to modify `SyntaxMap.json` file. It's generated automatically on build.
+Put just your new syntax style into `/CotEditor/syntaxes/` directory. You don't need to modify `SyntaxMap.json` file. It's generated automatically on the build.
 
 The license for the bundled syntax styles should be "Same as CotEditor".
 
@@ -52,12 +72,12 @@ If the syntax language is relatively minor, we recommend you to distribute it as
 
 ### Themes
 
-We aren't accepting pull-requests adding bundled theme at the moment. You can distribute it as an additional theme by your own way, and add a link to our [wiki page](https://github.com/coteditor/CotEditor/wiki/Additional-Themes).
+We aren't accepting pull-requests adding bundled theme at the moment. You can distribute yours as an additional theme by your own way, and add a link to our [wiki page](https://github.com/coteditor/CotEditor/wiki/Additional-Themes).
 
 
 ### Graphics Resources
 
-We aren't accepting pull-requests for image resources. [1024jp](https://github.com/1024jp) is enjoying to create and brush-up the graphics ;). Please just point out on the Issues page if graphic resource has some kind of mistake to be fixed.
+We aren't accepting pull-requests for image resources. [1024jp](https://github.com/1024jp) enjoys creating and brushing up the graphics ;). Please just point out on the Issues page if a graphic resource has some kind of mistake to be fixed.
 
 
 Coding Style Guide
@@ -65,37 +85,33 @@ Coding Style Guide
 
 Please follow the style of the existing codes in CotEditor.
 
-- Use always the [modern Objective-C](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/ModernizationObjC/AdoptingModernObjective-C/AdoptingModernObjective-C.html).
+- Respect the existing coding style.
 - Leave reasonable comments.
-- Prefer using the classic bracket style to access properties.
-	```ObjC
-	// use
-	[self setFoo:@"foo"];
-	NSString *foo = [self foo];
-	
-	// instead
-	self.foo = @"foo";
-	NSString *foo = self.foo;
-	```
-- Leave the opening-curly-bracket `{` in the same line as long as the condition statement is a single line, otherwise put it in a new line.
-	```ObjC
-	// single line
-	if (foo > 0) {
-		// your code
-	}
-	
-	// multiple lines
-	if ((foo > 0) &&
-	    (foo < 100))
-	{
-		// your code
+- Never omit `self`.
+- Add `final` to classes by default.
+- Insert a blank line after class/function statement line.
+	```Swift
+	/// say moof.
+	func moof() {
+		
+		print("moof")
 	}
 	```
-- Don't omit curly brackets even the contents is a single line.
-	```ObjC
-	// use
-	if (!foo) { return; }
-	
-	// instead
-	if (!foo) return;
+- Don't declare `@IBOutlet` properties with `!`.
+	```Swift
+    // OK
+    @IBOutlet private weak var button: NSButton?
+    
+    // NG
+    @IBOutlet private weak var button: NSButton!
+	```
+- Write `guard` statement in one-line if just return a simple value.
+	```Swift
+    // prefer
+    guard let foo = foo else { return nil }
+    
+    // instead of
+    guard let foo = foo else {
+        return nil
+    }
 	```

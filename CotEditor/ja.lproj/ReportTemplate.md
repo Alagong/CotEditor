@@ -1,25 +1,25 @@
 
-以下のテンプレートに記入して [GitHub Issues](https://github.com/coteditor/CotEditor/issues) に投稿するか <coteditor.github@gmail.com> にメールをしてください。送られたメールの内容は Issue ページで公開される可能があります。
+以下のテンプレートに記入して[GitHub Issues](https://github.com/coteditor/CotEditor/issues)に投稿するか<coteditor.github@gmail.com>にメールをしてください。送られたメールの内容はIssueページで公開される可能があります。本文は英語か日本語、どちらかでお書きください。
 
 -----------------------------------------------
 
-## 環境 
+## Environment (環境)
 
 - CotEditor: %SHORT_VERSION% (%BUNDLE_VERSION%)
-- システム: OS X %SYSTEM_VERSION%
-- 言語環境: 日本語
+- System: macOS %SYSTEM_VERSION%
+- Language: Japanese
 
 
-## 簡単な説明
-
-<!-- ここに記入 -->
-
-
-## 不具合が発生したときに行っていた操作、または再現手順
+## Short Description (簡単な説明)
 
 <!-- ここに記入 -->
 
 
-## 期待される挙動
+## Steps to Reproduce the Issue (不具合が発生したときに行っていた操作、または再現手順)
+
+<!-- ここに記入 -->
+
+
+## Expected Result (期待される挙動)
 
 <!-- ここに記入 -->

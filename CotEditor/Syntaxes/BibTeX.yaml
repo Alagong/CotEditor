@@ -1,16 +1,18 @@
 extensions:
 - keyString: "bib"
+- keyString: "bibtex"
 filenames: []
+metadata:
+  distributionURL: "https://coteditor.com"
+  lastModified: "2016-02-28"
+  author: "1024jp"
+  license: "Same as CotEditor"
+  version: "1.1.0"
 outlineMenu:
 - beginString: "@(\\w+)\\s*\\{\\s*([^,=]+)"
   keyString: "@$1 $2"
+  description: "entry"
 comments: []
-metadata:
-  distributionURL: "http://coteditor.com"
-  lastModified: "2014-11-22"
-  author: "1024jp"
-  license: "Same as CotEditor"
-  version: "1.0.0"
 numbers: []
 commands:
 - beginString: "\\emph"
@@ -93,7 +95,13 @@ attributes:
 - beginString: "\\bpages[\\t ]*="
   ignoreCase: true
   regularExpression: true
+- beginString: "\\bprice[\\t ]*="
+  ignoreCase: true
+  regularExpression: true
 - beginString: "\\bpublisher[\\t ]*="
+  ignoreCase: true
+  regularExpression: true
+- beginString: "\\bisbn[\\t ]*="
   ignoreCase: true
   regularExpression: true
 - beginString: "\\bschool[\\t ]*="
@@ -106,6 +114,9 @@ attributes:
   ignoreCase: true
   regularExpression: true
 - beginString: "\\btype[\\t ]*="
+  ignoreCase: true
+  regularExpression: true
+- beginString: "\\burl[\\t ]*="
   ignoreCase: true
   regularExpression: true
 - beginString: "\\bvolume[\\t ]*="

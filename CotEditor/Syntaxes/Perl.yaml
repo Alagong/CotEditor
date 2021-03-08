@@ -2,17 +2,28 @@ extensions:
 - keyString: "pl"
 - keyString: "cgi"
 - keyString: "pm"
+interpreters:
+- keyString: "perl"
+metadata:
+  distributionURL: "https://coteditor.com"
+  version: "2.2.1"
+  description: "Maintained by CotEditor Project."
+  license: "Same as CotEditor"
+  lastModified: "2015-12-25"
 outlineMenu:
 - beginString: "^([\\t ]*)(sub)[ ]*([a-z][a-z0-9_]*)[^{].*\\{"
   ignoreCase: true
   keyString: "$1$2 $3 {}"
+  description: "sub-routine"
 - beginString: "^[ ]*(\\@ISA)([^;]*);"
   ignoreCase: true
   keyString: "$1 $2"
+  description: "@ISA"
   italic: true
 - beginString: "^[ ]*(package)[ ]*([a-z][a-z0-9_]*).*$"
   ignoreCase: true
   keyString: "$1 $2"
+  description: "package"
   italic: true
 commands:
 - beginString: "abs"
@@ -126,12 +137,14 @@ commands:
 - beginString: "open"
 - beginString: "opendir"
 - beginString: "ord"
+- beginString: "our"
 - beginString: "pack"
 - beginString: "pipe"
 - beginString: "pop"
 - beginString: "pos"
 - beginString: "print"
 - beginString: "printf"
+- beginString: "prototype"
 - beginString: "push"
 - beginString: "quotemeta"
 - beginString: "rand"
@@ -186,16 +199,20 @@ commands:
 - beginString: "sqrt"
 - beginString: "srand"
 - beginString: "stat"
+- beginString: "state"
 - beginString: "study"
 - beginString: "substr"
 - beginString: "symlink"
 - beginString: "syscall"
+- beginString: "sysopen"
 - beginString: "sysread"
+- beginString: "sysseek"
 - beginString: "system"
 - beginString: "syswrite"
 - beginString: "tell"
 - beginString: "telldir"
 - beginString: "tie"
+- beginString: "tied"
 - beginString: "time"
 - beginString: "times"
 - beginString: "truncate"
@@ -217,12 +234,6 @@ commands:
 - beginString: "wantarray"
 - beginString: "warn"
 - beginString: "write"
-metadata:
-  distributionURL: "http://coteditor.com"
-  version: "2.0"
-  description: "Maintained by CotEditor Project."
-  license: "Same as CotEditor"
-  lastModified: "2014-09-24"
 characters:
 - beginString: "'"
   endString: "'"
@@ -375,10 +386,13 @@ numbers:
 - beginString: "(?<![0-9a-z_$])[0-9.][0-9._]*(e[-+][0-9._]+)?\\b"
   ignoreCase: true
   regularExpression: true
+  description: "decimal"
 - beginString: "\\b0b[01_]+\\b"
   regularExpression: true
+  description: "binary"
 - beginString: "\\b0x[0-9a-fA-F_]+\\b"
   regularExpression: true
+  description: "hexadecimal"
 strings:
 - beginString: "\""
   endString: "\""
@@ -425,7 +439,7 @@ keywords:
 - beginString: "sub"
 - beginString: "tr"
 - beginString: "unless"
-- beginString: "untill"
+- beginString: "until"
 - beginString: "while"
 - beginString: "xor"
 - beginString: "y"

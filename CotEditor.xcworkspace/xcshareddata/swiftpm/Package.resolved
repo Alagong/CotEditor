@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ColorCode",
+        "repositoryURL": "https://github.com/1024jp/WFColorCode",
+        "state": {
+          "branch": null,
+          "revision": "70ca646fed5c40e19331d48b2ba38df1f790c828",
+          "version": "2.6.1"
+        }
+      },
+      {
+        "package": "Yams",
+        "repositoryURL": "https://github.com/jpsim/Yams",
+        "state": {
+          "branch": null,
+          "revision": "9003d51672e516cc59297b7e96bff1dfdedcb4ea",
+          "version": "4.0.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

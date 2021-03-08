@@ -1,30 +1,82 @@
 /*
- KeyBindingsPane.strings
+ 
+ KeyBindingsPane.strings (Simplified Chinese)
  
  CotEditor
- http://coteditor.com
+ https://coteditor.com
  
- Created on 2014-12-12 by 1024jp
+ Created by 1024jp on 2014-12-12.
  Localized by onevcat
- encoding="UTF-8"
  
- © 2014 CotEditor Project
+ ------------------------------------------------------------------------------
+ 
+ © 2014-2018 CotEditor Project
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ https://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ 
  */
- 
-/* Class = "NSTextFieldCell"; title = "Menu Key Bindings"; ObjectID = "3359"; */
-"3359.title" = "菜单按键绑定";
-/* Class = "NSTextFieldCell"; title = "Shortcuts for menu items."; ObjectID = "3361"; */
-"3361.title" = "菜单项目的快捷按键";
-/* Class = "NSTextFieldCell"; title = "This setting does not include script menu items."; ObjectID = "3362"; */
-"3362.title" = "这些设定不包括脚本菜单中的项目";
-/* Class = "NSButtonCell"; title = "Edit…"; ObjectID = "3360"; */
-"3360.title" = "编辑…";
 
-/* Class = "NSTextFieldCell"; title = "Additional Text Key Bindings"; ObjectID = "3363"; */
-"3363.title" = "额外的文本按键绑定";
-/* Class = "NSTextFieldCell"; title = "Shortcuts to insert preset text."; ObjectID = "3364"; */
-"3364.title" = "插入预定义文本的快捷按键";
-/* Class = "NSTextFieldCell"; title = "This setting is not for the standard Cocoa key bindings\nbut for CotEditor's original function."; ObjectID = "3366"; */
-"3366.title" = "这些设定不是针对标准的 Cocoa 快捷按键的，\n而是对 CotEditor 中的功能有效";
-/* Class = "NSButtonCell"; title = "Edit…"; ObjectID = "3365"; */
-"3365.title" = "编辑…";
+/* Class = "NSViewController"; title = "Menu Items"; ObjectID = "sBQ-LT-Rwm"; */
+"sBQ-LT-Rwm.title" = "菜单项";
+/* Class = "NSViewController"; title = "Snippets"; ObjectID = "9kQ-W2-4kw"; */
+"9kQ-W2-4kw.title" = "代码片段";
+
+
+
+
+/* Class = "NSTextFieldCell"; title = "Shortcuts for menu items"; ObjectID = "ZYM-tb-Csx"; */
+"ZYM-tb-Csx.title" = "菜单项目的快捷按键";
+
+/* Class = "NSTextFieldCell"; title = "(excluding Script menu)"; ObjectID = "Dl2-3y-7EJ"; */
+"Dl2-3y-7EJ.title" = "(不包括. 脚本菜单)";
+
+/* Class = "NSTextFieldCell"; title = "To change a binding, select it, click the key column, and then type the keys."; ObjectID = "Hue-bU-8wr"; */
+"Hue-bU-8wr.title" = "选中要绑定的项目并单击按键列来改变绑定";
+
+/* Class = "NSTextFieldCell"; title = "The keys here must include the Command key."; ObjectID = "qGe-Et-FB2"; */
+"qGe-Et-FB2.title" = "快捷键中必须包含 Command 键。";
+
+/* Class = "NSTableColumn"; headerCell.title = "Action"; ObjectID = "jNh-nd-VRd"; */
+"jNh-nd-VRd.headerCell.title" = "动作";
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "PSD-Um-TfH"; */
+"PSD-Um-TfH.headerCell.title" = "按键";
+
+/* Class = "NSButtonCell"; title = "Restore Defaults"; ObjectID = "CyK-OL-qHa"; */
+"CyK-OL-qHa.title" = "恢复默认";
+
+
+
+
+/* Class = "NSTextFieldCell"; title = "Shortcuts for preset text insertion"; ObjectID = "eMZ-Mx-JSK"; */
+"eMZ-Mx-JSK.title" = "插入预定义文本的快捷按键";
+
+/* Class = "NSTextFieldCell"; title = "To change a binding, select it, click the key column, and then type the keys."; ObjectID = "a9m-M2-rgC"; */
+"a9m-M2-rgC.title" = "选中要绑定的项目并单击按键列来改变绑定";
+
+/* Class = "NSTextFieldCell"; title = "The keys here must exclude the Command key."; ObjectID = "5zd-aF-0zL"; */
+"5zd-aF-0zL.title" = "快捷键中不能包含 Command 键。";
+
+/* Class = "NSTableColumn"; headerCell.title = "Action"; ObjectID = "sz5-hl-bZK"; */
+"sz5-hl-bZK.headerCell.title" = "动作";
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "hXU-bV-zlt"; */
+"hXU-bV-zlt.headerCell.title" = "按键";
+
+/* Class = "NSTextFieldCell"; title = "Insertion Format:"; ObjectID = "tuB-9O-QZH"; */
+"tuB-9O-QZH.title" = "按格式插入：";
+/* Class = "NSMenuItem"; title = "Insert Variable"; ObjectID = "wC4-qj-3oD"; */
+"wC4-qj-3oD.title" = "插入变量";
+/* Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "Select Action"; ObjectID = "Y5G-PR-ofT"; */
+"Y5G-PR-ofT.ibShadowedNoSelectionPlaceholder" = "选择动作。";
+
+/* Class = "NSButtonCell"; title = "Restore Defaults"; ObjectID = "0Du-JI-ZN7"; */
+"0Du-JI-ZN7.title" = "恢复默认";

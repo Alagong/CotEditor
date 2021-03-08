@@ -1,11 +1,20 @@
 extensions:
 - keyString: "svg"
+metadata:
+  author: "1024jp"
+  distributionURL: "https://coteditor.com"
+  version: "1.2.5"
+  description: "Based on SVG 1.1 (Second Edition)"
+  license: "Same as CotEditor"
+  lastModified: "2020-09-15"
 outlineMenu:
-- beginString: " id=\"(.+?)\""
+- beginString: "(?<= )id=\"([^\"]+?)\""
+  description: "id"
   ignoreCase: true
   keyString: "#$1"
   italic: true
 - beginString: "<title[^>]*>([^<]*)</title[^>]*>"
+  description: "title"
   ignoreCase: true
   keyString: "$1"
   bold: true
@@ -295,9 +304,9 @@ completions:
 - keyString: "z"
 - keyString: "zoomAndPan"
 commands:
-- beginString: "(?<=<)\\?xml"
+- beginString: "(?<=<)\\?xml\\b"
   regularExpression: true
-- beginString: "(?<=<)\\?xml-stylesheet"
+- beginString: "(?<=<)\\?xml-stylesheet\\b"
   regularExpression: true
 - beginString: "\\?(?=>)"
   regularExpression: true
@@ -474,8 +483,6 @@ attributes:
   regularExpression: true
 - beginString: "\\sformat\\b(?=[^<>]*>)"
   regularExpression: true
-- beginString: "\\sfradientTransform\\b(?=[^<>]*>)"
-  regularExpression: true
 - beginString: "\\sfrom\\b(?=[^<>]*>)"
   regularExpression: true
 - beginString: "\\sfx\\b(?=[^<>]*>)"
@@ -493,6 +500,8 @@ attributes:
 - beginString: "\\sglyph-orientation-vertical\\b(?=[^<>]*>)"
   regularExpression: true
 - beginString: "\\sglyphRef\\b(?=[^<>]*>)"
+  regularExpression: true
+- beginString: "\\sgradientTransform\\b(?=[^<>]*>)"
   regularExpression: true
 - beginString: "\\sgradientUnits\\b(?=[^<>]*>)"
   regularExpression: true
@@ -858,13 +867,6 @@ attributes:
   regularExpression: true
 - beginString: "\\szoomAndPan\\b(?=[^<>]*>)"
   regularExpression: true
-metadata:
-  author: "1024jp"
-  distributionURL: "http://coteditor.com"
-  version: "1.2"
-  description: "Based on SVG 1.1 (Second Edition)"
-  license: "Same as CotEditor"
-  lastModified: "2014-09-24"
 characters:
 - beginString: "&#[0-9]+;"
   regularExpression: true
@@ -1087,19 +1089,19 @@ keywords:
 - beginString: "(?<=</?dc:)type\\b"
   regularExpression: true
 variables:
-- beginString: "cc:(?=[a-zA-Z])"
+- beginString: "\\bcc:(?=[a-zA-Z])"
   regularExpression: true
-- beginString: "dc:(?=[a-zA-Z])"
+- beginString: "\\bdc:(?=[a-zA-Z])"
   regularExpression: true
-- beginString: "rdf:(?=[a-zA-Z])"
+- beginString: "\\brdf:(?=[a-zA-Z])"
   regularExpression: true
-- beginString: "svg:(?=[a-zA-Z])"
+- beginString: "\\bsvg:(?=[a-zA-Z])"
   regularExpression: true
-- beginString: "xlink:(?=[a-z])"
+- beginString: "\\bxlink:(?=[a-z])"
   regularExpression: true
-- beginString: "xml:(?=[a-z])"
+- beginString: "\\bxml:(?=[a-z])"
   regularExpression: true
-- beginString: "xmlns:(?=[a-z])"
+- beginString: "\\bxmlns:(?=[a-z])"
   regularExpression: true
 commentDelimiters:
   endDelimiter: "-->"

@@ -1,17 +1,32 @@
 extensions:
 - keyString: "rb"
+filenames:
+- keyString: "Gemfile"
+interpreters:
+- keyString: "ruby"
+metadata:
+  author: "Y.Tokutomi"
+  distributionURL: "https://coteditor.com"
+  version: "2.3.0"
+  description: "Maintained by CotEditor Project."
+  license: "Same as CotEditor"
+  lastModified: "2020-09-14"
 outlineMenu:
 - beginString: "(^[\\t ]*class)[\\t ]+(\\w*)"
   keyString: "$1 $2"
+  description: "class"
   underline: true
 - beginString: "(^[\\t ]*def)[\\t ]+([^\\s(]*)"
   keyString: "$1 $2"
+  description: "method"
   italic: true
 - beginString: "(^[\\t ]*module)[\\t ]+(\\w*)"
   keyString: "$1 $2"
+  description: "module"
   bold: true
 commands:
-- beginString: ".class"
+- beginString: "(?<=\\.)class\\b"
+  regularExpression: true
 - beginString: "__id__"
 - beginString: "__send__"
 - beginString: "abort"
@@ -46,8 +61,10 @@ commands:
 - beginString: "format"
 - beginString: "freeze"
 - beginString: "frozen?"
+- beginString: "gem"
 - beginString: "gets"
 - beginString: "global_variables"
+- beginString: "group"
 - beginString: "gsub"
 - beginString: "gsub!"
 - beginString: "hash"
@@ -74,6 +91,7 @@ commands:
 - beginString: "object_id"
 - beginString: "open"
 - beginString: "p"
+- beginString: "path"
 - beginString: "print"
 - beginString: "private"
 - beginString: "private_methods"
@@ -100,6 +118,7 @@ commands:
 - beginString: "singleton_method_undefined"
 - beginString: "singleton_methods"
 - beginString: "sleep"
+- beginString: "source"
 - beginString: "spawn"
 - beginString: "split"
 - beginString: "sprintf"
@@ -124,13 +143,6 @@ commands:
 - beginString: "untaint"
 - beginString: "untrace_var"
 - beginString: "warn"
-metadata:
-  author: "Y.Tokutomi"
-  distributionURL: "http://coteditor.com"
-  version: "2.0.1"
-  description: "Maintained by CotEditor Project."
-  license: "Same as CotEditor"
-  lastModified: "2014-11-21"
 characters: []
 comments: []
 values:
@@ -233,19 +245,25 @@ numbers:
 - beginString: "\\b0b[01_]+\\b"
   ignoreCase: true
   regularExpression: true
+  description: "binary"
 - beginString: "\\b0d[0-9_]+\\b"
   ignoreCase: true
   regularExpression: true
+  description: "decimal"
 - beginString: "\\b0o[0-7_]+\\b"
   ignoreCase: true
   regularExpression: true
+  description: "octal"
 - beginString: "\\b0x[0-9a-f_]+\\b"
   ignoreCase: true
   regularExpression: true
+  description: "hexadecimal"
 - beginString: "\\b[0-9][0-9_]*\\.[0-9_]+([eE][0+][0-9_]+)?r?i?\\b"
   regularExpression: true
+  description: "float"
 - beginString: "\\b[0-9][0-9_]*\\b"
   regularExpression: true
+  description: "integer"
 - beginString: "`"
   endString: "`"
 strings:

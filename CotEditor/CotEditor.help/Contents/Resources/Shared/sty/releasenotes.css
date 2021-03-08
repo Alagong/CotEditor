@@ -4,17 +4,15 @@
  Additional Help Style Sheet for Release Notes
  
  CotEditor
- http://coteditor.com
+ https://coteditor.com
  
  Created on 2014 by 1024jp
  
- © 2014 CotEditor Project
+ © 2014-2020 CotEditor Project
 */
 
 
 article ul, ol {
-	border: none;
-	background: transparent;
 	margin: 0;
 	padding: 0 1.5em;
 }
@@ -27,7 +25,7 @@ article ul li {
 
 footer {
 	font-size: 90%;
-	color: hsl(0,0%,50%);
+	color: -apple-system-secondary-label;
 	margin-top: 2em;
 	padding: 0 1em;
 }
@@ -35,30 +33,17 @@ footer::before {
 	content: '';
 	display: block;
 	width: 140px;
-	border-top: 1px solid hsla(0,0%,0%,.2);
+	border-top: 1px solid -apple-system-separator;
 	margin: 0.8em 0;
 }
-
-code {
-	border: 1px solid hsla(0,0%,0%,.1);
-	background: hsla(0,0%,0%,.03);
-	padding: 0 0.3em;
-	border-radius: 2px;
-}
-
 
 p.note strong {
 	text-decoration: underline;
 }
 
-article {
-	font-size: 13px;
-}
-
 article+article {
 	margin-top: 4em;
-	border-top: 1px solid hsla(0,0%,0%,.25);
-	padding-top: 1em;
+	padding-top: 2em;
 }
 
 article > header h1 {
@@ -67,23 +52,43 @@ article > header h1 {
 	margin: 0;
 }
 article > header p {
-	color: hsl(0,0%,40%);
+	color: -apple-system-secondary-label;
 	margin: 0;
+	text-indent: 0 !important;
 }
 article h2 {
-	font-size: 110%;
-	font-weight: bold;
+	font-size: 105%;
+	margin-bottom: 0.5em;
 }
 
 .none {
-	color: hsl(0,0%,50%);
+	color: -apple-system-secondary-label;
+}
+
+.trivial,
+.label {
+	color: hsl(198, 40%, 45%);
+	border: 1px solid;
+	border-radius: 3px;
+	padding: 0 0.2em;
+}
+.trivial {
+	color: hsl(0, 0%, 60%);
+}
+p.important {
+	display: inline-block;
+	color: hsl(203, 30%, 30%);
+	background: hsl(203, 50%, 98%);
+	border: 1px solid hsl(203, 20%, 70%);
+	border-radius: 3px;
+	padding: 0.1em 0.5em;
 }
 
 /* highlights */
 .highlights {
 	font: 'Helvetica Neue';
-	border-top: 2px solid hsl(203,20%,90%);
-	border-bottom: 2px solid hsl(203,20%,90%);
+	border-top: 2px solid hsl(203, 20%, 90%);
+	border-bottom: 2px solid hsl(203, 20%, 90%);
 	padding: 1em 0;
 }
 .highlights h1 {
@@ -91,7 +96,7 @@ article h2 {
 }
 .highlights dt::before {
 	content: '✔︎';
-	color: hsl(90,50%,50%);
+	color: hsl(90, 50%, 50%);
 	font-size: 140%;
 	vertical-align: -0.05em;
 	margin-right: 0.3em;

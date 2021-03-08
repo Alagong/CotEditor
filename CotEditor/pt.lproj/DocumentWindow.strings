@@ -1,0 +1,64 @@
+//
+// DocumentWindow.strings (Portuguese)
+// 
+// CotEditor
+// https://coteditor.com
+// 
+// Created by BR Lingo on 2018-01-15.
+// Localized by BR Lingo
+// 
+// ------------------------------------------------------------------------------
+// 
+// © 2018-2020 CotEditor Project
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+// https://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+/* Class = "NSTabViewItem"; label = "Document Inspector"; ObjectID = "Kfj-q6-61N"; */
+"Kfj-q6-61N.label" = "Inspetor do Documento";
+/* Class = "NSTabViewItem"; label = "Outline"; ObjectID = "hyM-2j-hen"; */
+"hyM-2j-hen.label" = "Plano";
+/* Class = "NSTabViewItem"; label = "Incompatible Characters"; ObjectID = "JZo-ok-Dks"; */
+"JZo-ok-Dks.label" = "Caracteres Incompatíveis";
+
+
+/* Class = "NSTextFieldCell"; title = "Editor’s Opacity"; ObjectID = "Are-7I-6OR"; */
+"Are-7I-6OR.title" = "Opacidade do Editor";
+/* Class = "NSView"; ibShadowedToolTip = "Transparent"; ObjectID = "EVo-Ee-gQ1"; */
+"EVo-Ee-gQ1.ibShadowedToolTip" = "Transparente";
+/* Class = "NSView"; ibShadowedToolTip = "Opaque"; ObjectID = "8NN-KX-RmA"; */
+"8NN-KX-RmA.ibShadowedToolTip" = "Opaco";
+
+
+/* Class = "NSPopUpButton"; title = "File encoding"; ObjectID = "CUv-So-9Og"; */
+"CUv-So-9Og.ibShadowedToolTip" = "Codificação do arquivo";
+/* Class = "NSMenuItem"; title = "File Encoding"; ObjectID = "mS8-3F-93y"; */
+"q4F-Uw-VL4.title" = "Codificação do Arquivo";
+
+/* Class = "NSMenuItem"; title = "Line Endings"; ObjectID = "mS8-3F-93y"; */
+"mS8-3F-93y.title" = "Finais de Linha";
+/* Class = "NSMenuItem"; title = "LF"; ObjectID = "YT7-vd-3ih"; */
+"YT7-vd-3ih.title" = "LF";
+/* Class = "NSMenuItem"; title = "CR"; ObjectID = "J48-tF-WBo"; */
+"J48-tF-WBo.title" = "CR";
+/* Class = "NSMenuItem"; title = "CRLF"; ObjectID = "Zo1-Cc-YBm"; */
+"Zo1-Cc-YBm.title" = "CRLF";
+
+/* Class = "NSPopUpButton"; title = "Line endings"; ObjectID = "FNE-H9-iZR"; */
+"FNE-H9-iZR.ibShadowedToolTip" = "Finais de linha";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "macOS / Unix"; ObjectID = "YT7-vd-3ih"; */
+"YT7-vd-3ih.ibShadowedToolTip" = "macOS / Unix";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Classic Mac OS"; ObjectID = "J48-tF-WBo"; */
+"J48-tF-WBo.ibShadowedToolTip" = "Mac OS Clássico";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Windows"; ObjectID = "Zo1-Cc-YBm"; */
+"Zo1-Cc-YBm.ibShadowedToolTip" = "Windows";
